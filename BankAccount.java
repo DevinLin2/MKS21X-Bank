@@ -16,9 +16,6 @@ public class BankAccount{
   public void setPass(String newpass){
     pass = newpass;
   }
-  public String getpass(){
-    return pass;
-  }
   public String toString(){
     return "Account ID: " + ID + "\t" + "Account balance: " + bal;
   }
@@ -40,5 +37,11 @@ public class BankAccount{
     return password == pass;
   }
   public boolean transferTo(BankAccount other, double amount, String password){
+    if (amount > 0 && password == other.pass && amount <= bal){
+      bal -= amount;
+      other.bal += amount;
+      return true;
+    }
+    return false;
   }
 }
