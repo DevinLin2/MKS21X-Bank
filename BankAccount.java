@@ -22,18 +22,18 @@ public class BankAccount{
   public String toString(){
     return "Account ID: " + ID + "\t" + "Account balance: " + bal;
   }
-  public String deposit(double money){
+  public boolean deposit(double money){
     if (money > 0){
       bal += money;
-      return "Deposit successful!";
+      return true;
     }
-    return "Deposit unsuccessful!";
+    return false;
   }
-  public String withdraw(double money){
+  public boolean withdraw(double money){
     if (money > bal){
-      return "Withdrawl unsuccessful!";
+      return true;
     }
     bal -= money;
-    return "Withdrawl successful!";
+    return false;
   }
 }
