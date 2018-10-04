@@ -31,9 +31,9 @@ public class BankAccount{
   }
   public String withdraw(double money){
     if (money > bal){
-      return "Withdrawl unsuccessful!"
+      return "Withdrawl unsuccessful!";
     }
-    bal -= money
-    return "Withdrawl successful!"
+    bal -= money;
+    return "Withdrawl successful!";
   }
 }
