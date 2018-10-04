@@ -36,4 +36,9 @@ public class BankAccount{
     bal -= money;
     return false;
   }
+  private boolean authenticate(String password){
+    return password == pass;
+  }
+  public boolean transferTo(BankAccount other, double amount, String password){
+  }
 }
